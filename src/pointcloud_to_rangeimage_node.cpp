@@ -79,12 +79,12 @@ public:
     _range_image_ptr(new RangeImage),
     _nh("~")
   {
-    _drsv.reset(new RangeImageReconfServer(ros::NodeHandle("pointcloud_to_rangeimage_dynreconf")));
+    //_drsv.reset(new RangeImageReconfServer(ros::NodeHandle("pointcloud_to_rangeimage_dynreconf")));
 
     RangeImageReconfServer::CallbackType cb;
     cb = boost::bind(&RangeImageConverter::drcb, this, _1, _2);
 
-    _drsv->setCallback(cb);
+    //_drsv->setCallback(cb);
 
     double ang_res_x, ang_res_y,
            max_ang_w, max_ang_h,
