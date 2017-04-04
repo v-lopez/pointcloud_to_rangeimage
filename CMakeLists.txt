@@ -82,3 +82,10 @@ target_link_libraries(rangeimage_to_pointcloud_node
 ## Install ##
 #############
 
+## Mark executables and/or libraries for installation
+install(TARGETS rangeimage_to_pointcloud_node pointcloud_to_rangeimage_node 
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
