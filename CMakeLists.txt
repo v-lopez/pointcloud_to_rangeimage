@@ -29,7 +29,7 @@ generate_messages(
 )
 
 generate_dynamic_reconfigure_options(
-    cfg/RangeImage.cfg
+    cfg/PointCloudToRangeImageReconfigure.cfg
 )
 
 catkin_package(
