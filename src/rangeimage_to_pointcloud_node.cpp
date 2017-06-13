@@ -96,6 +96,7 @@ public:
     boost::mutex::scoped_lock lock(_mut);
 
     _range_image_msg_ptr = msg;
+    _newmsg = true;
   }
 
   void convert()
@@ -104,7 +105,7 @@ public:
     if (_pub.getNumSubscribers() == 0)
       return;
 
-    if (_newmsg || _range_image_msg_ptr == NULL)
+    if (!_newmsg || _range_image_msg_ptr == NULL)
       return;
 
     PointCloud pointcloud;
