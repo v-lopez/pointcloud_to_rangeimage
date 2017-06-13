@@ -9,7 +9,7 @@
   <arg name="point_cloud_in"  default="/velodyne_points"/>
   <arg name="image_out" default="/image_out"/>
 
-  <node pkg="pointcloud_to_rangeimage" type="pointcloud_to_rangeimage_node" name="pointcloud_to_rangeimage" output="screen">
+  <node pkg="pointcloud_to_rangeimage" type="pointcloud_to_rangeimage_node" name="pointcloud_to_rangeimage" output="screen" respawn="true">
      <remap from="~point_cloud_in" to="$(arg point_cloud_in)"   />
      <remap from="image_out"       to="$(arg image_out)"        />
      <param name="publish_image"   value="$(arg publish_image)" />
